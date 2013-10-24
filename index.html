@@ -58,14 +58,15 @@
                                           '/sdcard/Download/'+song_name,
                                           function(entry) {
                                           console.log('download complete: ' + entry.fullPath);
-                                          alert(entry.toURI());
+                                          alert("Downloaded to: "+entry.toURI());
                                           },
                                           function(error) {
                                           console.log('download error source ' + error.source);
                                           console.log('download error target ' + error.target);
                                           console.log('upload error code' + error.code);
                                           });
-                    alert(song_url);
+                  //  alert(song_url);
+                    alert("Downloading "+ song_name);
                 }
                 
                 // Called when a photo is successfully retrieved
@@ -453,7 +454,7 @@
                 
                 <article data-role="content">
                     
-                    <h1 id='maintitle'> Top Nigerian Songs </h1>
+                    <h1 id='maintitle'> Trending Nigerian Music</h1>
                     <ul data-role="listview" data-inset='true'id='trendList'>
                     </ul>
                     
