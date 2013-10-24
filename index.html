@@ -228,7 +228,8 @@
                 function goToSongDetailPage(songTitle, stream_url, backLocation){
                     $('.stopBtn')[0].onclick();
                     
-                    var musicPage = $("<div data-role='page'id='songDetail' data-url=> <img src='img/testbg.png' class='fullscreen'><div id='onbackground'><div data-role='header'><h1>" + songTitle + "</h1><a href='"+backLocation+"' data-icon='home' data-iconpos='notext' id='backBtn'>search</a></div><br/><br/><br/><br/><div data-role='content'><div id='preview'><p>Preview</p><audio id='previewsong' src='"+stream_url+"' preload='auto' controls></audio></div><a href='#' data-role='button' class='frontPageBtn'><p id='downloadbtn' onclick=myDownload("+stream_url+", "+ songTitle +")>Download</p></a></div></div><script>var audioElem = $('audio')["+count++ +"];\n$('#backBtn')[0].setAttribute('onclick', 'enableStopBtn()');\n    \<\/script\></div>");
+                    var onclickevent = 'onclick="myDownload(\''+ stream_url + '\',\'' + songTitle +'.mp3'+ '\')"';
+                    var musicPage = $("<div data-role='page'id='songDetail' data-url=> <img src='img/testbg.png' class='fullscreen'><div id='onbackground'><div data-role='header'><h1>" + songTitle + "</h1><a href='"+backLocation+"' data-icon='home' data-iconpos='notext' id='backBtn'>search</a></div><br/><br/><br/><br/><div data-role='content'><div id='preview'><p>Preview</p><audio id='previewsong' src='"+stream_url+"' preload='auto' controls></audio></div><a href='#' data-role='button' class='frontPageBtn'><p id='downloadbtn' "+onclickevent+">Download</p></a></div></div><script>var audioElem = $('audio')["+count++ +"];\n$('#backBtn')[0].setAttribute('onclick', 'enableStopBtn()');\n    \<\/script\></div>");
                     
                     var i = 0;
                     while($('.stopBtn')[i]){
