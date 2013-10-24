@@ -266,7 +266,7 @@
                 
                 $.ajax({
                        type: 'GET',
-                       url: "http://musicnaija.herokuapp.com/api/week_top_ten?callback=?",
+                       url: "http://musicnaija-europe.herokuapp.com/api/week_top_ten?callback=?",
                        async: false,
                        jsonpCallback: 'jsonCallback',
                        contentType: "application/json",
@@ -297,7 +297,7 @@
                     if(songName != ""){
                         $.ajax({
                                type: 'GET',
-                               url: "http://musicnaija.herokuapp.com/api?q="+ songName + "&callback=?",
+                               url: "http://musicnaija-europe.herokuapp.com/api?q="+ songName + "&callback=?",
                                async: false,
                                jsonpCallback: 'jsonCallback',
                                contentType: "application/json",
